@@ -1,10 +1,10 @@
 <div class="row g-3">
     <?php foreach($lugares as $id => $lugar): ?>
-        <div class="col-6 col-md-4 col-lg-3">
+        <div class="col-6">
             <form method="post" class="h-100">
                 <input type="hidden" name="lugar_id" value="<?= (int)$id ?>">
-                <button type="submit" class="btn btn-outline-success w-100 h-100 py-4 d-flex flex-column align-items-center justify-content-center shadow-sm">
-                    <span class="fs-1 mb-2"><?= htmlspecialchars($lugar["icone"]) ?></span>
+                <button type="submit" class="btn w-100 h-100 d-flex flex-column align-items-center justify-content-center">
+                    <span class="fs-1"><?= htmlspecialchars($lugar["icone"]) ?></span>
                     <span class="fw-bold text-dark"><?= htmlspecialchars($lugar["nome"]) ?></span>
                 </button>
             </form>

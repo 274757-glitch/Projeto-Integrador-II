@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
+:root {
+    --cor-roxo: #63509E;
+    --cor-roxo-hover: #503F85;
+    --cor-fundo: #FAF8F6;
+    --cor-texto: #2D2A38;
+    --cor-borda: #EAE6F0;
+    
+    /* Cores Pastel do Figma */
+    --pastel-lilas: #EFEAF8;
+    --pastel-verde: #E3F2EC;
+    --pastel-azul: #E6EFF8;
+    --pastel-amarelo: #F8F1D4;
+    --pastel-rosa: #F9E6E8;
+    --pastel-pessego: #FBECE1;
+}
+
+body {
+    background-color: var(--cor-fundo) !important;
+    color: var(--cor-texto);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Limita a largura para ficar com visual de App Mobile igual ao Figma */
+main.container, .expressa-header .container, .expressa-bottom-nav .container {
+    max-width: 480px;
+}
+
+/* Cabeçalho Expressa */
+.expressa-logo {
+    color: var(--cor-roxo);
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.badge-perfil {
+    background-color: var(--pastel-lilas);
+    color: var(--cor-roxo);
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 6px 14px;
+    border-radius: 50px;
+}
+
+/* Barra de Navegação Inferior (Figma) */
+.expressa-bottom-nav {
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #6E6A7C;
+    padding: 6px 20px;
+    border-radius: 18px;
+    transition: all 0.2s ease;
+}
+
+.bottom-nav-item .nav-icon {
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+.bottom-nav-item .nav-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.bottom-nav-item.active {
+    background-color: var(--pastel-lilas);
+    color: var(--cor-roxo);
+    font-weight: 700;
+}
+
+/* Botões principais e pílulas */
+.btn-primary {
+    background-color: var(--cor-roxo) !important;
+    border-color: var(--cor-roxo) !important;
+    border-radius: 16px;
+    font-weight: 700;
+    padding: 12px 24px;
+}
+
+.btn-secondary, .btn-outline-primary {
+    background-color: #FFFFFF !important;
+    color: var(--cor-roxo) !important;
+    border: 1.5px solid var(--cor-borda) !important;
+    border-radius: 50px !important;
+    font-weight: 600;
+    padding: 6px 18px;
+}
+
+/* Cartões em Grelha (Pessoas, Lugares, Objetos, Categorias) */
+.row.g-3 .btn {
+    background-color: #FFFFFF !important;
+    border: 1.5px solid var(--cor-borda) !important;
+    border-radius: 24px !important;
+    padding: 22px 14px !important;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02) !important;
+}
+
+.row.g-3 .btn:hover {
+    transform: translateY(-3px);
+    border-color: var(--cor-roxo) !important;
+    box-shadow: 0 8px 20px rgba(99, 80, 158, 0.12) !important;
+}
+
+/* Círculo pastel atrás dos ícones */
+.row.g-3 .btn .fs-1 {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--pastel-lilas);
+    margin-bottom: 12px !important;
+    font-size: 2.3rem !important;
+}
+
+.row.g-3 > div:nth-child(6n+1) .btn .fs-1 { background-color: var(--pastel-lilas); }
+.row.g-3 > div:nth-child(6n+2) .btn .fs-1 { background-color: var(--pastel-verde); }
+.row.g-3 > div:nth-child(6n+3) .btn .fs-1 { background-color: var(--pastel-azul); }
+.row.g-3 > div:nth-child(6n+4) .btn .fs-1 { background-color: var(--pastel-amarelo); }
+.row.g-3 > div:nth-child(6n+5) .btn .fs-1 { background-color: var(--pastel-rosa); }
+.row.g-3 > div:nth-child(6n+6) .btn .fs-1 { background-color: var(--pastel-pessego); }
+
+/* Cartão de Perfil LS e Timeline do Histórico (Figma) */
+.perfil-card {
+    background-color: #FFFFFF;
+    border: 1.5px solid var(--cor-borda);
+    border-radius: 22px;
+}
+
+.avatar-ls {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: var(--pastel-lilas);
+    color: var(--cor-roxo);
+    font-weight: 800;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.timeline-expressa {
+    position: relative;
+    padding-left: 24px;
+}
+
+.timeline-expressa::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background-color: var(--cor-borda);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -24px;
+    top: 14px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--cor-roxo);
+}
+
+.timeline-card {
+    background-color: #FFFFFF;
+    border: 1.5px solid var(--cor-borda);
+    border-radius: 20px;
+}
+
+.badge-categoria {
+    background-color: var(--pastel-verde);
+    color: #2E6B55;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 50px;
+}
+
+/* Listas de Favoritos */
+.list-group {
+    gap: 12px;
+}
+
+.list-group-item {
+    background-color: #FFFFFF;
+    border: 1.5px solid var(--cor-borda) !important;
+    border-radius: 20px !important;
+    padding: 14px 18px !important;
+}
+
+.list-group-item .fs-3 {
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--pastel-verde);
+}
+
+/* Alerta lilás estilo "Reproduzindo" */
+.alert-success {
+    background-color: var(--pastel-lilas) !important;
+    color: var(--cor-roxo) !important;
+    border: none !important;
+    border-radius: 16px !important;
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--cor-texto);
+}
