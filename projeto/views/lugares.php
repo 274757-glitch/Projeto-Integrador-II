@@ -1,3 +1,9 @@
+<?php 
+require_once __DIR__ . '/../dados.php';
+global $lugares;
+?>
+
+
 <div class="row g-3">
     <?php foreach($lugares as $id => $lugar): ?>
         <div class="col-6">

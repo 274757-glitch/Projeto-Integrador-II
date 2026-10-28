@@ -1,3 +1,8 @@
+<?php 
+require_once __DIR__ . '/../dados.php';
+global $tela;
+?>
+
 </main>
 
     <!-- Barra de Navegação Inferior (Bottom Bar igual ao Figma) -->
