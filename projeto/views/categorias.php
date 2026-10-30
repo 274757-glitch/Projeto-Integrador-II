@@ -1,3 +1,8 @@
+<?php 
+require_once __DIR__ . '/../dados.php';
+global $categoriaSelecionada;
+?>
+
 <div class="my-2">
     <?php if($categoriaSelecionada !== "" && isset($categorias[$categoriaSelecionada])): ?>
 

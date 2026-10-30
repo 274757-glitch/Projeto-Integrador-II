@@ -1,3 +1,9 @@
+<?php 
+require_once __DIR__ . '/../dados.php';
+global $itens;
+global $editar;
+?>
+
 <div class="my-2">
     <?php if($editar): ?>
 

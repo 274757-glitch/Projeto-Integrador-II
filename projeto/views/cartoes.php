@@ -1,3 +1,7 @@
+<?php 
+require_once __DIR__ . '/../dados.php';
+global $listaCartoes;
+?>
 <div class="row g-3">
     <?php foreach($listaCartoes as $cartao): ?>
         <div class="col-6">
